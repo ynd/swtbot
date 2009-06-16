@@ -12,6 +12,8 @@ package org.eclipse.swtbot.swt.finder.widgets;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Spinner;
+import org.eclipse.swtbot.swt.finder.ReferenceBy;
+import org.eclipse.swtbot.swt.finder.SWTBotWidget;
 import org.eclipse.swtbot.swt.finder.exceptions.WidgetNotFoundException;
 import org.eclipse.swtbot.swt.finder.results.IntResult;
 import org.eclipse.swtbot.swt.finder.results.VoidResult;
@@ -24,6 +26,7 @@ import org.hamcrest.SelfDescribing;
  * @author Yann N. Dauphin
  * @version $Id$
  */
+@SWTBotWidget(clasz = Spinner.class, preferredName = "spinner", referenceBy = { ReferenceBy.LABEL, ReferenceBy.TOOLTIP })
 public class SWTBotSpinner extends AbstractSWTBot<Spinner> {
 	
 	/**
